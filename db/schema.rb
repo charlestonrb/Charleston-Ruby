@@ -10,7 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110513024905) do
+ActiveRecord::Schema.define(:version => 20110513165635) do
+
+  create_table "meetings", :force => true do |t|
+    t.string   "name"
+    t.text     "agenda"
+    t.datetime "datetime"
+    t.integer  "place_id"
+    t.integer  "organization_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "members", :force => true do |t|
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "github"
+    t.string   "twitter"
+    t.string   "blog"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "organizations", :force => true do |t|
     t.string   "name"
