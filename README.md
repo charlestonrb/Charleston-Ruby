@@ -32,4 +32,6 @@ rake db:migrate
 rails s
 ```
 
+## License
 
+see LICENSE
