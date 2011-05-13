@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110513031128) do
+ActiveRecord::Schema.define(:version => 20110513170216) do
 
   create_table "meetings", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,17 @@ ActiveRecord::Schema.define(:version => 20110513031128) do
     t.datetime "datetime"
     t.integer  "place_id"
     t.integer  "organization_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "members", :force => true do |t|
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "github"
+    t.string   "twitter"
+    t.string   "blog"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +47,14 @@ ActiveRecord::Schema.define(:version => 20110513031128) do
     t.string   "twitter"
     t.decimal  "lat",        :precision => 15, :scale => 10
     t.decimal  "lng",        :precision => 15, :scale => 10
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "git"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
