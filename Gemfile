@@ -9,6 +9,8 @@ gem 'mysql2'
 
 # Asset template engines
 gem 'sass'
+gem 'json_pure'
+gem 'json'
 gem 'coffee-script'
 gem 'uglifier'
 
@@ -29,4 +31,4 @@ group :test do
 end
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
-gem "omniauth", "~> 0.2.0"
+gem 'shoulda'

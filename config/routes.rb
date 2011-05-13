@@ -1,5 +1,8 @@
 Charlestonruby::Application.routes.draw do
+  root :to => 'organizations#index'
   match '/auth/:provider/callback', :to => 'sessions#callback'
+
+  resources :organizations
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
