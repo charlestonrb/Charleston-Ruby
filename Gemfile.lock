@@ -114,6 +114,7 @@ DEPENDENCIES
   jquery-rails
   json
   json_pure
+  multi_json
   mysql2
   rails (= 3.1.0.beta1)
   sass
