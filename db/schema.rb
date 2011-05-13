@@ -10,10 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110512231641) do
+ActiveRecord::Schema.define(:version => 20110513024905) do
 
   create_table "organizations", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "places", :force => true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "twitter"
+    t.decimal  "lat",        :precision => 15, :scale => 10
+    t.decimal  "lng",        :precision => 15, :scale => 10
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,35 +1,39 @@
-* Organization
-  * Name
-  * Projects
-  * Members
-  * Places
-  * Meetings
-* Place
-  * Name
-  * Address
-  * Phone
-  * Email
-  * Twitter
-  * Lat 
-  * Lng
-* Meeting
-  * Name
+Models to be Migrated into Database:
+  * Member
+    * First Name
+    * Last Name
+    * Github
+    * Twitter
+    * Blog
+    * Email
+    * Projects
+  * Project
+    * Name
+    * Git Repo
+    * Description
+    * Members
+
+Migrated Models:
+  * Organization
+    * Name
+    * Projects
+    * Members
+    * Places
+    * Meetings
   * Place
-  * DateTime
-  * Agenda
-* Member
-  * First Name
-  * Last Name
-  * Github
-  * Twitter
-  * Blog
-  * Email
-  * Projects
-* Project
-  * Name
-  * Git Repo
-  * Description
-  * Members
+    * Name
+    * Address
+    * Phone
+    * Email
+    * Twitter
+    * Lat 
+    * Lng
+  * Meeting
+    * Name
+    * Place
+    * Organization
+    * DateTime
+    * Agenda
   
 
 == Welcome to Rails
