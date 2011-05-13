@@ -1,0 +1,28 @@
+body.sessions {
+	margin: 0;padding: 0;
+	* {margin: 0;padding: 0;}
+	
+  background-color: #ddd;
+  
+  #wrap {
+		width: 720px;
+		padding: 20px; margin: 50px auto;
+		background: #fff; border: 1px solid #bbb;
+		
+		h1 {
+			text-align: center;
+      font-family: 'Crimson Text', serif;font-weight: 600;font-size: 156px;letter-spacing: -5px;
+			color: #000;
+			margin: 0 0 40px 0;
+			
+			img {position: relative; bottom: -39px; left: 0px;}
+			span {color: #bc272b;}
+    }
+    
+    h3 {
+      text-align: center;
+      font: 32px Helvetica;font-weight: bold;
+      color: #666;
+    }
+  }
+}
