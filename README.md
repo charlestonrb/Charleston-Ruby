@@ -20,17 +20,32 @@ Please fork, grab and issue and hack away.
 Assuming you forked the project
 
 ```
-git clone git@github.com/[username]/CharlestonRuby.git
+git clone git@github.com/[username]/Charleston-Ruby.git
 ```
 
 ```
 cd CharlestonRuby
 # should switch to 1.9.2@railspre --create
+gem install bundler
 bundle install
 rake db:create
 rake db:migrate
 rails s
 ```
+
+## How do I keep my fork up to date?
+
+```
+git remote add --track master charlestonrb git://github.com/charlestonrb/Charleston-Ruby.git
+
+git fetch charlestonrb
+
+git merge charlestonrb/master
+
+[More Info](http://bradlyfeeley.com/2008/09/03/update-a-github-fork-from-the-original-repo/)
+
+```
+
 
 ## License
 
