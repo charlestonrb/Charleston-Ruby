@@ -1,5 +1,6 @@
 Charlestonruby::Application.routes.draw do
-  root :to => 'organizations#index'
+  #root :to => 'organizations#index'
+  root :to => 'sessions#index'
   match '/auth/:provider/callback', :to => 'sessions#callback'
 
   resources :organizations
