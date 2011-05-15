@@ -1,0 +1,30 @@
+= form_for @member do |f|
+  = f.error_messages
+  %p
+    = f.label :first_name, :class => 'required'
+    %br
+    = f.text_field :first_name
+  %p
+    = f.label :last_name
+    %br
+    = f.text_field :last_name
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+  %p
+    = f.label :github
+    %br
+    = f.text_field :github
+  %p
+    = f.label :twitter
+    %br
+    = f.text_field :twitter
+  %p
+    = f.label :blog
+    %br
+    = f.text_field :blog
+  %p
+  = f.submit
+  or
+  = link_to 'Cancel', members_path
