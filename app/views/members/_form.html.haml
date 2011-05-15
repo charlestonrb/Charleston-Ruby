@@ -1,20 +1,29 @@
 = form_for @member do |f|
-  = f.label :email
-  = f.text_field :email
   %p
-  = f.label :first_name
-  = f.text_field :first_name
+    = f.label :first_name
+    %br
+    = f.text_field :first_name
   %p
-  = f.label :last_name
-  = f.text_field :last_name
+    = f.label :last_name
+    %br
+    = f.text_field :last_name
   %p
-  = f.label :github
-  = f.text_field :github
+    = f.label :email
+    %br
+    = f.text_field :email
   %p
-  = f.label :twitter
-  = f.text_field :twitter
+    = f.label :github
+    %br
+    = f.text_field :github
   %p
-  = f.label :blog
-  = f.text_field :blog
+    = f.label :twitter
+    %br
+    = f.text_field :twitter
+  %p
+    = f.label :blog
+    %br
+    = f.text_field :blog
   %p
   = f.submit
+  or
+  = link_to 'Cancel', members_path

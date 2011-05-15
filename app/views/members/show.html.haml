@@ -1,3 +1,27 @@
 %h3= @member.full_name
+%p
+  First Name
+  %br
+  = @member.first_name
+%p
+  Last Name
+  %br
+  = @member.last_name
+%p
+  Email
+  %br
+  = @member.email
+%p
+  Github
+  %br
+  = @member.github
+%p
+  Twitter
+  %br
+  = @member.twitter
+%p
+  Blog
+  %br
+  = @member.blog
 %br
-= link_to 'Member List', members_path
+= link_to 'Back to Member List', members_path
