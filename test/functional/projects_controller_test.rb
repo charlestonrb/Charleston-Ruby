@@ -8,7 +8,6 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'should get show' do
-
     get :show, id: @project.id
     assert_response :success
     assert_not_nil assigns(:project)
