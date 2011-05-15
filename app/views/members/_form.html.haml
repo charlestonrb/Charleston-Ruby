@@ -1,6 +1,7 @@
 = form_for @member do |f|
+  = f.error_messages
   %p
-    = f.label :first_name
+    = f.label :first_name, :class => 'required'
     %br
     = f.text_field :first_name
   %p
