@@ -46,3 +46,8 @@ git merge charlestonrb/master
 ## License
 
 See LICENSE
+
+## Contributors
+
+* [Dirk](https://github.com/dirk)
+* [Gradius](https://github.com/gradus)
