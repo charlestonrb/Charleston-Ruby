@@ -4,6 +4,7 @@ Charlestonruby::Application.routes.draw do
   match 'about', :to => 'pages#about'
 
   resources :organizations
+  resources :members
   resources :projects
   # The priority is based upon order of creation:
   # first created -> highest priority.
