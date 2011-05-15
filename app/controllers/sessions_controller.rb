@@ -4,4 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def auth; request.env['omniauth.auth'] end
+  
+  def index
+  end
 end

@@ -1,11 +1,11 @@
 Charlestonruby::Application.routes.draw do
-  root :to => 'organizations#index'
+  root :to => 'pages#home'
   match '/auth/:provider/callback', :to => 'sessions#callback'
+  match 'about', :to => 'pages#about'
 
   resources :organizations
-
   resources :members
-
+  resources :projects
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
