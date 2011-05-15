@@ -1,0 +1,20 @@
+= form_for @member do |f|
+  = f.label :email
+  = f.text_field :email
+  %p
+  = f.label :first_name
+  = f.text_field :first_name
+  %p
+  = f.label :last_name
+  = f.text_field :last_name
+  %p
+  = f.label :github
+  = f.text_field :github
+  %p
+  = f.label :twitter
+  = f.text_field :twitter
+  %p
+  = f.label :blog
+  = f.text_field :blog
+  %p
+  = f.submit
