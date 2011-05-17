@@ -108,6 +108,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   coffee-script
   haml (>= 3.0.0)
   haml-rails
