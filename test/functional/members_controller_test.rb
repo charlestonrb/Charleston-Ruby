@@ -21,7 +21,7 @@ class MembersControllerTest < ActionController::TestCase
   end
 
   test 'should post create' do
-    post :create, :member => {:name => 'foobar'}
+    post :create, :member => {:first_name => 'foobar'}
     assert_response :redirect
     assert_not_nil assigns(:member)
     assert_redirected_to member_path(assigns(:member))
@@ -35,16 +35,18 @@ class MembersControllerTest < ActionController::TestCase
   end
 
   test 'should put update' do
-    put :update, id: @member.id, member: {name: 'Foobar'}
+    put :update, id: @member.id, member: {first_name: 'Foobar'}
     assert_response :redirect
     assert_not_nil assigns(:member)
     assert_redirected_to member_path(assigns(:member))
     assert_equal "Successfully updated member.", flash[:notice]
-    assert_equal Member.find(@member.id).name, 'Foobar'
+    assert_equal Member.find(@member.id).first_name, 'Foobar'
   end
 
 
   def setup
-    @member = Member.create!
+    @member = Member.create!(
+      :first_name => 'Foobar'
+    )
   end
 end
