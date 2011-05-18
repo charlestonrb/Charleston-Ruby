@@ -1,4 +1,4 @@
-# Charleston Ruby dot ORG
+Charleston Ruby dot ORG - text edit
 
 ![charleston ruby logo](http://www.charlestonruby.org/images/charleston-ruby.gif)
 
