@@ -27,6 +27,7 @@ body {
       color: #666;
     }
   }
+
   .drop-shadow {
       position:relative;
       -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -72,4 +73,12 @@ body {
            -o-transform:rotate(3deg);
               transform:rotate(3deg);
   }
+
+  #user_nav {
+    float: right;
+  }
+  #flash_notice {
+    float: left;
+  }
+  .clear {clear: both;}
 }
