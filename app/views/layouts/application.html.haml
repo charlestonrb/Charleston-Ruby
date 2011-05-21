@@ -7,7 +7,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    #wrap
+    #wrap.drop-shadow.lifted
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       #user_nav
