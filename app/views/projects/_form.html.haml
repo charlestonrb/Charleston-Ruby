@@ -1,0 +1,9 @@
+= form_for(@project) do |f|
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.submit
+    or
+    = link_to 'Cancel', projects_path

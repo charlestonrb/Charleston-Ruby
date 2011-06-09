@@ -7,8 +7,18 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    #wrap
-      .notice=notice
+    #wrap.drop-shadow.lifted
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+      #user_nav
+        - if current_user
+          Logged in as #{current_user.email}.
+          #{link_to "Log out", log_out_path}
+        - else
+          = link_to "Sign up", sign_up_path
+          or
+          #{link_to "log in", log_in_path}
+      .clear
       #header
         %h1
           %img{:src => '/assets/logo.gif', :alt => ''}

@@ -1,0 +1,23 @@
+%h3= @member.full_name
+- unless @member.email.blank?
+  %p
+    Email
+    %br
+    = @member.email
+- unless @member.github.blank?
+  %p
+    Github
+    %br
+    = @member.github
+- unless @member.twitter.blank?
+  %p
+    Twitter
+    %br
+    = @member.twitter
+- unless @member.blog.blank?
+  %p
+    Blog
+    %br
+    = @member.blog
+%br
+= link_to 'Back to Member List', members_path

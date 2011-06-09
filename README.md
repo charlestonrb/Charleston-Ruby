@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 Charleston Ruby dot ORG - text edit
+=======
+# charlestonruby.org
+>>>>>>> charlestonrb/master
 
-![charleston ruby logo](http://www.charlestonruby.org/images/charleston-ruby.gif)
+![Charleston Ruby Logo](http://www.charlestonruby.org/images/charleston-ruby.gif)
 
-This is the charleston ruby group website project, this project is work of the charleston ruby community.
+This is the Charleston Ruby User Group website project, a collaborative project built by the members of the User Group.
 
 ## Development Requirements
 
@@ -13,17 +17,15 @@ This is the charleston ruby group website project, this project is work of the c
 
 ## Fork and Hack
 
-Please fork, grab and issue and hack away.
+Please fork, grab an issue (just comment on it so that others know you're working on it), hack away, and send pull requests.
 
 ## Setting up you development environment
 
 Assuming you forked the project
 
 ```
-git clone git@github.com/[username]/Charleston-Ruby.git
-```
+git clone git@github.com/[your-username]/Charleston-Ruby.git CharlestonRuby
 
-```
 cd CharlestonRuby
 # should switch to 1.9.2@railspre --create
 gem install bundler
@@ -41,12 +43,19 @@ git remote add --track master charlestonrb git://github.com/charlestonrb/Charles
 git fetch charlestonrb
 
 git merge charlestonrb/master
-
-[More Info](http://bradlyfeeley.com/2008/09/03/update-a-github-fork-from-the-original-repo/)
-
 ```
 
+[More information](http://bradlyfeeley.com/2008/09/03/update-a-github-fork-from-the-original-repo/) on working with remote repositories. Also please note that in GitHub nomenclature (if you're ever perusing the Help section), the remote is named "upstream" instead of "charlestonrb".
 
 ## License
 
+<<<<<<< HEAD
 see LICENSE
+=======
+See LICENSE
+
+## Contributors
+
+* [Dirk](https://github.com/dirk)
+* [Gradius](https://github.com/gradus)
+>>>>>>> charlestonrb/master
