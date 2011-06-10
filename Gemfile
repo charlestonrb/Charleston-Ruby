@@ -17,6 +17,7 @@ gem 'uglifier'
 
 gem 'jquery-rails'
 gem "bcrypt-ruby", :require => "bcrypt"
+gem 'cancan'
 # Use unicorn as the web server
 # gem 'unicorn'
 
