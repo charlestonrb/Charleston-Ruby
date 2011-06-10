@@ -24,6 +24,15 @@
     = f.label :blog
     %br
     = f.text_field :blog
+  - if @member.new_record?
+    %p
+      = f.label :password
+      %br
+      = f.password_field :password
+    %p
+      = f.label :password_confirmation
+      %br
+      = f.password_field :password_confirmation
   %p
   = f.submit
   or

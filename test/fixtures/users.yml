@@ -2,8 +2,8 @@
 
 one:
   email: MyString
-  password_hash: MyString
-  password_salt: MyString
+  password_hash: $2a$10$efWSF536kMNlWdOyJ8OxsuEpSUK3oJFkiRv2WMywO7jAmCp2Y2ROe
+  password_salt: $2a$10$efWSF536kMNlWdOyJ8Oxsu
 
 two:
   email: MyString
