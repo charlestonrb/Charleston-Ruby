@@ -1,9 +1,9 @@
 = form_for @member do |f|
   = f.error_messages
   %p
-    = f.label :first_name, :class => 'required'
+    = f.label :first_name
     %br
-    = f.text_field :first_name
+    = f.text_field :first_name, :class => 'required'
   %p
     = f.label :last_name
     %br
