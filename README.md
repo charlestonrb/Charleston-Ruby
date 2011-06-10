@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+Charleston Ruby dot ORG - text edit
+=======
 # charlestonruby.org
+>>>>>>> charlestonrb/master
 
 ![Charleston Ruby Logo](http://www.charlestonruby.org/images/charleston-ruby.gif)
 
@@ -45,9 +49,13 @@ git merge charlestonrb/master
 
 ## License
 
+<<<<<<< HEAD
+see LICENSE
+=======
 See LICENSE
 
 ## Contributors
 
 * [Dirk](https://github.com/dirk)
 * [Gradius](https://github.com/gradus)
+>>>>>>> charlestonrb/master
