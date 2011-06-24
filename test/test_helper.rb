@@ -9,5 +9,8 @@ class ActiveSupport::TestCase
   # -- they do not yet inherit this setting
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  def login
+    user = Member.authenticate('test@foobar.com', 'password')
+    session[:user_id] = user.id if user
+  end
 end

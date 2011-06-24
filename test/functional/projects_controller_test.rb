@@ -14,12 +14,14 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'should get new' do
+    login
     get :new
     assert_response :success
     assert_not_nil assigns(:project)
   end
 
   test 'should post create' do
+    login
     post :create, :project => {:name => 'foobar'}
     assert_response :redirect
     assert_not_nil assigns(:project)
@@ -28,12 +30,14 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'should get edit' do
+    login
     get :edit, id: @project.id
     assert_response :success
     assert_not_nil assigns(:project)
   end
 
   test 'should put update' do
+    login
     put :update, id: @project.id, project: {name: 'Foobar'}
     assert_response :redirect
     assert_not_nil assigns(:project)
@@ -44,7 +48,8 @@ class ProjectsControllerTest < ActionController::TestCase
 
 
   def setup
-    @project = Project.create!
+    @project = projects(:one)
   end
+
 end
 
