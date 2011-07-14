@@ -29,6 +29,9 @@ gem 'cancan'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'launchy'
 end
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
