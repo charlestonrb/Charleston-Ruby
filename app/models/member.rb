@@ -1,5 +1,5 @@
 class Member < ActiveRecord::Base
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :github, :twitter, :blog
 
   attr_accessor :password
   before_save :encrypt_password
