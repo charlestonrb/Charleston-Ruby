@@ -1,6 +1,7 @@
 class MembersController < ApplicationController
   before_filter :find_member, :only => ['show', 'edit', 'update', 'destroy']
   respond_to :html, :json
+  load_and_authorize_resource
 
   def index
     @members = Member.all
