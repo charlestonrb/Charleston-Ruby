@@ -3,9 +3,13 @@ class Ability
 
   def initialize(user)
     if user
-      can :manage, :all
-    else
       can :read, :all
+      can :update, Member do |member| 
+        member == user
+      end
+      #can [:read, :update, :destroy], Member if Member == user
+    else
+      can [:create, :read], :all
     end
     
     # Define abilities for the passed in user here. For example:

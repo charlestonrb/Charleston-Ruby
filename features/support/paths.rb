@@ -11,6 +11,9 @@ module NavigationHelpers
     when /^the home\s?page$/
       '/'
 
+    when /^edit (.*)'s profile\s?page$/
+      edit_member_path(Member.find_by_email("#{$1}@email.com"))
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
