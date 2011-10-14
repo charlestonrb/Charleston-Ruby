@@ -2,25 +2,37 @@
 %html
   %head
     %title Charleston Ruby
-    %link{:href => "http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic,600,600italic,bold,bolditalic", :rel => "stylesheet", :type => "text/css"}
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body
-    #wrap.drop-shadow.lifted
-      - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
-      #user_nav
-        - if current_user
-          Logged in as #{current_user.email}.
-          #{link_to "Log out", log_out_path}
-        - else
-          = link_to "Sign up", sign_up_path
-          or
-          #{link_to "log in", log_in_path}
-      .clear
-      #header
-        %h1
-          %img{:src => '/assets/logo.gif', :alt => ''}
-          chs<span>ruby</span>
+    :css
+      body {
+        padding-top: 60px;
+      }
+  %body{:id => controller_name}
+    .topbar
+      .fill
+        .container
+          %a.brand{:href => "#"} Charleston Ruby
+          %ul.nav
+            %li#pages= link_to 'Home', root_path
+            %li#projects= link_to 'Projects', projects_path
+            %li#members= link_to 'Members', members_path
+
+          .pull-right
+            - if current_user
+              %ul.nav
+                %li
+                  Logged in as #{current_user.email}
+                %li
+                  =link_to "Log out", log_out_path
+            - else
+              %ul.nav
+                %li= link_to "Sign up", sign_up_path
+                %li= link_to "log in", log_in_path
+            
+    .container
+      .span16
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}", :class => 'alert-message'
       = yield

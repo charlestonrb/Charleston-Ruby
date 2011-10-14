@@ -1,39 +1,31 @@
-= form_for @member do |f|
+= form_for @member, :html => { :class => 'form-stacked' } do |f|
   = f.error_messages
   %p
     = f.label :first_name
-    %br
-    = f.text_field :first_name, :class => 'required'
+    = f.text_field :first_name, :class => 'required', :style => 'width: 80%;'
   %p
     = f.label :last_name
-    %br
-    = f.text_field :last_name
+    = f.text_field :last_name, :style => 'width: 80%;'
   %p
     = f.label :email
-    %br
-    = f.text_field :email
+    = f.text_field :email, :style => 'width: 80%;', :placeholder => 'your@email.com'
   %p
     = f.label :github
-    %br
-    = f.text_field :github
+    = f.text_field :github, :style => 'width: 80%;', :placeholder => 'Github Account Name'
   %p
     = f.label :twitter
-    %br
-    = f.text_field :twitter
+    = f.text_field :twitter, :style => 'width: 80%;', :placeholder => 'Twitter Account'
   %p
     = f.label :blog
-    %br
     = f.text_field :blog
   - if @member.new_record?
     %p
       = f.label :password
-      %br
       = f.password_field :password
     %p
       = f.label :password_confirmation
-      %br
       = f.password_field :password_confirmation
   %p
-  = f.submit
+  = f.submit :class => 'btn primary'
   or
-  = link_to 'Cancel', members_path
+  = link_to 'Cancel', members_path, :class => 'btn info'

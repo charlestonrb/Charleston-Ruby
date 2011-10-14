@@ -1,3 +1,5 @@
-%li
-  = link_to(project.name, project_path(project))
-  = link_to('Edit', edit_project_path(project))
+%li.feature
+  .pull-right
+    = link_to 'Edit', edit_project_path(project), :class => 'btn primary'
+    
+  %h2= link_to project.name, project_path(project)

@@ -1,5 +1,13 @@
-%h3 Projects
+.span-one-third
+  = render 'shared/sidebar'
+.span9
+  .alert-message.warning
+    %h2 Projects
 
-%ul= render @projects
+  .pull-right
+    = link_to "New Project", new_project_path, :class => 'btn primary'
+  .span8{:style => 'margin-top: 20px;'}
+    %ul= render @projects
 
-= link_to 'Back to homepage', root_path
+  .offset6
+    = link_to 'Back to homepage', root_path, :class => 'btn info'

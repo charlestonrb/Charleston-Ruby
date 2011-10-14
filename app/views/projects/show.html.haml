@@ -1,3 +1,15 @@
-%h3= @project.name
-%br
-= link_to 'Back', projects_path
+.span-one-third
+  = render 'shared/sidebar'
+
+.span8
+  .alert-message.warning
+    %h2 Project Details
+
+  %p.pull-right
+    = link_to 'Github', @project.repo, :class => 'btn primary'
+  
+  %h3= @project.name
+  = @project.description
+  
+  
+  = link_to 'Back', projects_path, :class => 'btn info'
