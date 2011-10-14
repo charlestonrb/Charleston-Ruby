@@ -1,3 +1,8 @@
-%h3= @project.name
-%br
-= link_to 'Back', projects_path
+.offset2.span10
+  %h1= @project.name
+  %h4= @project.description
+  %p foobar
+  %p.pull-right
+    = link_to 'Github', @project.repo, :class => 'btn primary'
+  %br
+  = link_to 'Back', projects_path, :class => 'btn info'

@@ -1,9 +1,14 @@
-= form_for(@project) do |f|
+= form_for @project, :html => { :class => 'form-stacked' } do |f|
   %p
     = f.label :name
-    %br
-    = f.text_field :name
+    = f.text_field :name, :style => 'width: 100%'
   %p
-    = f.submit
+    = f.label :description
+    = f.text_area :description, :style => 'width: 100%'
+  %p
+    = f.label :repo
+    = f.text_field :repo, :style => 'width: 100%'
+  %p
+    = f.submit :class => 'btn primary'
     or
-    = link_to 'Cancel', projects_path
+    = link_to 'Cancel', projects_path, :class => 'btn info'

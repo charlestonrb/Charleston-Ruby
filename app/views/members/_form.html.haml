@@ -1,39 +1,31 @@
-= form_for @member do |f|
+= form_for @member, :html => { :class => 'form-stacked' } ddo |f|
   = f.error_messages
   %p
     = f.label :first_name
-    %br
     = f.text_field :first_name, :class => 'required'
   %p
     = f.label :last_name
-    %br
     = f.text_field :last_name
   %p
     = f.label :email
-    %br
     = f.text_field :email
   %p
     = f.label :github
-    %br
     = f.text_field :github
   %p
     = f.label :twitter
-    %br
     = f.text_field :twitter
   %p
     = f.label :blog
-    %br
     = f.text_field :blog
   - if @member.new_record?
     %p
       = f.label :password
-      %br
       = f.password_field :password
     %p
       = f.label :password_confirmation
-      %br
       = f.password_field :password_confirmation
   %p
-  = f.submit
+  = f.submit :class => 'btn primary'
   or
-  = link_to 'Cancel', members_path
+  = link_to 'Cancel', members_path, :class => 'btn info'
