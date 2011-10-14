@@ -1,3 +1,12 @@
-%li
-  = link_to(member.full_name, member_path(member))
-  = link_to('Edit', edit_member_path(member))
+%li.feature
+  .pull-right= link_to('Edit', edit_member_path(member), :class => 'btn primary')
+  .span1
+    %img{:style => 'width: 100%;', :src => gravatar(member.email)}
+  .span5
+    %h2= link_to member.full_name, member_path(member)
+    %p
+      = member.email
+    %p
+      = link_to "Github -> #{member.github}", "http://github.com/#{member.github}"
+      |
+      = link_to "Twitter -> #{member.twitter}", "http://twitter.com/#{member.twitter}"

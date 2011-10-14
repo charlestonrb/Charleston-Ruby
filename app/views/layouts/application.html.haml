@@ -9,15 +9,15 @@
       body {
         padding-top: 60px;
       }
-  %body
+  %body{:id => controller_name}
     .topbar
       .fill
         .container
           %a.brand{:href => "#"} Charleston Ruby
           %ul.nav
-            %li.active= link_to 'Home', root_path
-            %li= link_to 'Projects', projects_path
-            %li= link_to 'Members', members_path
+            %li#pages= link_to 'Home', root_path
+            %li#projects= link_to 'Projects', projects_path
+            %li#members= link_to 'Members', members_path
 
           .pull-right
             - if current_user
@@ -35,4 +35,4 @@
       .span16
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}", :class => 'alert-message'
-        = yield
+      = yield

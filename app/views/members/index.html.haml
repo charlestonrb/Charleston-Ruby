@@ -1,5 +1,9 @@
-%h3 Members
+.span-one-third
+  = render 'shared/sidebar'
+.span9
+  .alert-message.priority
+    %h2 Members
+  %ul= render @members
 
-%ul= render @members
-
-= link_to 'Back to homepage', root_path
+  .offset5
+    = link_to 'Back to homepage', root_path, :class => 'btn info'

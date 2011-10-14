@@ -1,8 +1,15 @@
-.offset2.span10
-  %h1= @project.name
-  %h4= @project.description
-  %p foobar
+.span-one-third
+  = render 'shared/sidebar'
+
+.span8
+  .alert-message.warning
+    %h2 Project Details
+
   %p.pull-right
     = link_to 'Github', @project.repo, :class => 'btn primary'
-  %br
+  
+  %h3= @project.name
+  = @project.description
+  
+  
   = link_to 'Back', projects_path, :class => 'btn info'
