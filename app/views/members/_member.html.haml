@@ -5,8 +5,6 @@
   .span5
     %h2= link_to member.full_name, member_path(member)
     %p
-      = member.email
-    %p
       = link_to "Github -> #{member.github}", "http://github.com/#{member.github}"
       |
       = link_to "Twitter -> #{member.twitter}", "http://twitter.com/#{member.twitter}"
