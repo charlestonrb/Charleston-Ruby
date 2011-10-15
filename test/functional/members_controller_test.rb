@@ -29,12 +29,14 @@ class MembersControllerTest < ActionController::TestCase
   end
 
   test 'should get edit' do
+    login
     get :edit, id: @member.id
     assert_response :success
     assert_not_nil assigns(:member)
   end
 
   test 'should put update' do
+    login
     put :update, id: @member.id, member: {first_name: 'Foo', last_name: 'Foo', email: 'test@foo.com', password: 'password'}
     assert_response :redirect
     assert_not_nil assigns(:member)
