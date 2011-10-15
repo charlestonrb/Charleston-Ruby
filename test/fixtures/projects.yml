@@ -2,3 +2,4 @@ one:
   name: Foo
   description: Bar
   git: http://githup.com/gradus
+  member: one
