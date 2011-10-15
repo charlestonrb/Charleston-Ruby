@@ -22,7 +22,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test 'should post create' do
     login
-    post :create, :project => {:name => 'foobar'}
+    post :create, :project => {:name => 'foobar', :description => "Test", :repo => "github.com/test"}
     assert_response :redirect
     assert_not_nil assigns(:project)
     assert_redirected_to project_path(assigns(:project))
