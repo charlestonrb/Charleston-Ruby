@@ -4,10 +4,7 @@
   .alert-message.warning
     %h2 Projects
 
-  .pull-right
-    = link_to "New Project", new_project_path, :class => 'btn primary'
-  .span8{:style => 'margin-top: 20px;'}
-    %ul= render @projects
+  %ul{:style => 'margin-left:0;'}= render @projects
 
-  .offset6
-    = link_to 'Back to homepage', root_path, :class => 'btn info'
+  = link_to "New Project", new_project_path, :class => 'btn primary'
+  = link_to 'Back to homepage', root_path, :class => 'btn info'

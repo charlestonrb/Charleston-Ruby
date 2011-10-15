@@ -1,14 +1,15 @@
-.thumbnail.span3
-  %h1
-    %img{:src => '/assets/logo.gif', :alt => ''}
-.span8
-  %h1 Log in
-  = form_tag sessions_path, :class => 'form-stacked' do
-    %p
-      = label_tag :email
-      = text_field_tag :email, params[:email]
-    %p
-      = label_tag :password
-      = password_field_tag :password
-    = submit_tag "Log in", :class => 'btn primary'
+.span-one-third
+  = render 'shared/sidebar'
+.span9
+  .alert-message.priority
+    %h2 Log in
+  .well
+    = form_tag sessions_path, :class => 'form-stacked' do
+      %p
+        = label_tag :email
+        = text_field_tag :email, params[:email], :style => 'width: 80%'
+      %p
+        = label_tag :password
+        = password_field_tag :password
+      = submit_tag "Log in", :class => 'btn primary'
 
