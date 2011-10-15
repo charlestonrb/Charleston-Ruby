@@ -5,11 +5,15 @@
   .alert-message.warning
     %h2 Project Details
 
-  %p.pull-right
-    = link_to 'Github', @project.repo, :class => 'btn primary'
-  
+  .pull-right
+    - if can? :update, @project
+      = link_to 'Edit', edit_project_path(@project), :class => 'btn primary'
   %h3= @project.name
-  = @project.description
-  
-  
-  = link_to 'Back', projects_path, :class => 'btn info'
+  .span7{:style => 'border-top: 1px solid gray;min-height: 250px;'}
+    = raw @project.rendered_description
+
+  %hr
+  .pull-right
+    = link_to 'Github', @project.repo, :class => 'btn primary'
+    
+    = link_to 'Back', projects_path, :class => 'btn info'

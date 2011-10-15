@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'rack', '1.3.3'
+gem 'thin'
 gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
@@ -23,6 +25,8 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'cancan'
+gem 'markdownizer'
+gem 'chronic'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -37,6 +41,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'minitest'
 end
 gem "haml", ">= 3.0.0"
 gem "haml-rails"

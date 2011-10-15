@@ -3,7 +3,6 @@
 .span9
   .alert-message.priority
     %h2 Members
-  %ul= render @members
+  %ul{:style => 'margin-left:0;'}= render @members
 
-  .offset5
-    = link_to 'Back to homepage', root_path, :class => 'btn info'
+  = link_to 'Back to homepage', root_path, :class => 'btn info'
