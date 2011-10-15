@@ -3,8 +3,10 @@ class Ability
 
   def initialize(user)
     if user
-    
-      can [:create, :update], Project       
+      can :create, Project
+      can [:update, :delete], Project do |project|
+        project.member == user
+      end
       can :update, Member do |member| 
         member == user
       end

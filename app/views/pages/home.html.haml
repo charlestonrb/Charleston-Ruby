@@ -4,13 +4,16 @@
 .span9
   .alert-message.warning
     %h2 Home
-  .noisy{:style => 'padding:10px;border: 1px solid rgba(0,0,0,.6);background: rgba(0,0,0,.5);-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;'}
-    %h4{:style => 'color: white;line-height: 1.4em;letter-spacing: .1em;'}
-      We have regular meetings on the second Thursday of each month. Meetings are at the offices of Jack Russell Software, 1067 Cliffwood Drive, Mount Pleasant, SC 29464
+  .well
+    %h4{:style => 'color: green;line-height: 1.4em;letter-spacing: .1em;'}
+      Meetings are held on the second Thursday of each month. Meetings are at the offices of Jack Russell Software, 1067 Cliffwood Drive, Mount Pleasant, SC 29464
       (
       %a{:href => "http://maps.google.com/maps?q=1067+Cliffwood+Drive,+Mount+Pleasant,+SC+29464"} MAP
-      ), at 6:30pm. The entrance is around at the back of the building. Look for signs.
-
+      )
+    %p{:style => 'margin-top: 10px'}
+      Next meeting is #{Chronic.parse('2nd thursday next month').strftime('%m/%d/%Y')}, at 6:30pm. 
+      %br
+      The entrance is around at the back of the building.
 .span9
   .span6
     %h5

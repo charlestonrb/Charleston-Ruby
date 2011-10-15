@@ -12,12 +12,12 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new
+    @project = current_user.projects.build
     respond_with @project
   end
 
   def create
-    @project = Project.new(params[:project])
+    @project = current_user.projects.build(params[:project])
     if @project.save
       flash[:notice] = "Successfully created project."
     else
@@ -27,12 +27,12 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @project = Project.find(params[:id])
+    @project = current_user.projects.find(params[:id])
     respond_with @project
   end
 
   def update
-    @project = Project.find(params[:id])
+    @project = current_user.projects.find(params[:id])
     if @project.update_attributes(params[:project])
       flash[:notice] = "Successfully updated project."
     else
@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Project.find(params[:id])
+    @project = current_user.projects.find(params[:id])
     if @project.destroy
       flash[:notice] = "Successfully deleted project."
     else

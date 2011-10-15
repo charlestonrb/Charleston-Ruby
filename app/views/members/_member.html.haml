@@ -1,5 +1,6 @@
 %li.feature
-  .pull-right= link_to('Edit', edit_member_path(member), :class => 'btn primary')
+  - if can? :update, member
+    .pull-right= link_to('Edit', edit_member_path(member), :class => 'btn primary')
   .span1
     %img{:style => 'width: 100%;', :src => gravatar(member.email)}
   .span5
